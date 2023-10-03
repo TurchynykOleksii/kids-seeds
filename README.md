@@ -10,7 +10,7 @@
 
 ## Технологии
 
-- HTML5,CSS3,SASS,JS,GULP,WORDPRESS
+- HTML5, CSS3, SASS, JS, GULP, WORDPRESS
 
 ## Використання
 
