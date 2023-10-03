@@ -1,0 +1,93 @@
+@import "../core";
+
+.day {
+  padding: 25px 0;
+
+  @include minw($lg) {
+    padding: 50px 0;
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+
+    @include minw($lg) {
+      margin-bottom: 25px;
+      font-size: 48px;
+    }
+  }
+
+  &__list {
+    padding: 19px 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: rgba($accent, 50%);
+    border-radius: 20px;
+
+    @include minw($lg) {
+      padding: 37px 53px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    @include minw($lg) {
+      gap: 28px;
+    }
+
+    span {
+      padding: 11px 4px;
+      min-width: 95px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      border-radius: 3px;
+      color: $white;
+      background: #A9B388;
+
+      @include minw($lg) {
+        padding: 13px 5px;
+        min-width: 208px;
+        font-size: 32px;
+        border-radius: 10px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.3;
+
+      @include minw($lg) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.social {
+  margin-top: 28px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  @include minw($lg) {
+    display: none;
+  }
+
+  &__phone {
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+}

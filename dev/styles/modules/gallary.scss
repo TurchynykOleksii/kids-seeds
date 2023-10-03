@@ -1,0 +1,131 @@
+@import "../core";
+
+.gallary {
+  &__headline {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+
+    @include minw($lg) {
+      margin-bottom: 80px;
+      font-size: 48px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+
+    @include minw($lg) {
+      margin-bottom: 50px;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    max-width: 105px;
+    max-height: 89px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include minw($lg) {
+      max-width: 403px;
+      max-height: 315px;
+      border-radius: 50px;
+    }
+
+    &:nth-child(5) {
+      max-width: 216px;
+      width: 100%;
+
+      @include minw($lg) {
+        max-width: 828px;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 27px;
+    padding: 15px 30px;
+    font-size: 10px;
+    background-color: rgba(215, 211, 211, 0.26);
+
+    @include minw($lg) {
+      margin-bottom: 60px;
+      padding: 30px 30px 30px 70px;
+      margin-left: auto;
+      max-width: 795px;
+      font-size: 36px;
+      font-weight: 300;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(215, 211, 211, 0.26);
+
+      @include minw($lg) {
+        left: auto;
+        right: -100%;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      right: -27px;
+      display: block;
+      width: 43px;
+      height: 75px;
+      background-image: url('../../img/general/spike-right.png');
+      fill: none;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include minw($lg) {
+        top: -44px;
+        left: -30px;
+        right: auto;
+        width: 81px;
+        height: 162px;
+        background-image: url('../../img/general/spike-left.png');
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    max-width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: $green;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #999696;
+
+    @include minw($lg) {
+      max-width: 420px;
+      padding: 45px;
+      font-size: 36px;
+      border-radius: 30px;
+    }
+  }
+}

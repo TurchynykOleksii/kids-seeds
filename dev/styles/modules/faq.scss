@@ -1,0 +1,183 @@
+@import "../core";
+
+.faq {
+  &__headline {
+    position: relative;
+    max-width: 208px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+
+    @include minw($lg) {
+      margin-bottom: 100px;
+      max-width: 840px;
+      font-size: 48px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      width: 20px;
+      height: 33px;
+      background-image: url('../../img/icons/arrow-faq.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      @include minw($lg) {
+        bottom: -50px;
+        width: 50px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include minw($lg) {
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: #f1ebd9;
+    border-radius: 10px;
+    overflow: hidden;
+
+  }
+
+  &__item-headline {
+    padding: 15px 44px 15px 15px;
+    background-color: $accent;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px -8px black;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include minw($lg) {
+      padding: 45px 125px 45px 45px;
+      font-size: 36px;
+    }
+
+
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 10px;
+    top: 26px;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    transform: rotateZ(45deg);
+    transform-origin: center;
+    z-index: 2;
+    transition: transform 250ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include minw($lg) {
+      width: 40px;
+      height: 40px;
+      top: 55px;
+      right: 36px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__item-text {
+    height: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    transition: transform 350ms ease-in-out;
+    position: relative;
+    z-index: 1;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    @include minw($lg) {
+      font-size: 28px;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 10px;
+    max-width: 205px;
+    margin-left: auto;
+    background-color: rgba(215, 211, 211, 0.26);
+    line-height: 1.1;
+
+    @include minw($lg) {
+      padding: 37px 95px;
+      max-width: 710px;
+      font-size: 36px;
+      margin-right: auto;
+      margin-left: 0;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(215, 211, 211, 0.26);
+
+      @include minw($lg) {
+        left: -100%;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: -31px;
+      display: block;
+      width: 43px;
+      height: 75px;
+      background-image: url('../../img/general/spike-left.png');
+      fill: none;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include minw($lg) {
+        right: 0;
+        left: auto;
+        width: 81px;
+        height: 162px;
+        transform: rotate(30deg);
+      }
+    }
+  }
+}

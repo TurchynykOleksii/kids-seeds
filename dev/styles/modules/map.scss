@@ -1,0 +1,99 @@
+@import "../core";
+
+.map {
+  padding-top: 147px;
+  background-image: url('../../img/general/map.png');
+  background-repeat: no-repeat;
+  background-position: -82px -5px;
+  background-size: contain;
+  background-color: $white;
+
+  @include minw($lg) {
+    padding-top: 380px;
+    background-position: -376px -73px;
+
+  }
+
+  &__contact {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    @include minw($lg) {
+      justify-content: end;
+      align-items: end;
+      gap: 155px;
+    }
+  }
+
+  &__adress {
+    display: block;
+    max-width: 220px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    background-color: $accent;
+    font-size: 14px;
+
+    @include minw($lg) {
+      margin-bottom: 67px;
+      padding: 15px 30px;
+      max-width: 560px;
+      font-size: 36px;
+      font-weight: 300;
+      text-decoration: none;
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: end;
+
+    @include minw($lg) {
+      flex-direction: column;
+      align-items: end;
+    }
+
+    a {
+      font-size: 10px;
+      text-decoration: none;
+
+      @include minw($lg) {
+        font-size: 36px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 7px;
+
+    @include minw($lg) {
+      gap: 18px;
+    }
+  }
+
+  &__social-item {
+    width: 28px;
+    height: 28px;
+
+    @include minw($lg) {
+      width: 72px;
+      height: 72px;
+
+      a {
+        display: inline-block;
+
+        img {
+
+          width: 72px;
+          height: 72px;
+        }
+      }
+    }
+  }
+}

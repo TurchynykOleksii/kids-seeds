@@ -1,0 +1,21 @@
+@import "core";
+
+@import "partials/fonts";
+@import "partials/base";
+@import "partials/typography";
+
+// Modules
+@import "modules/header";
+@import "modules/hero";
+@import "modules/kids";
+@import "modules/education";
+@import "modules/price";
+@import "modules/boss";
+@import "modules/faq";
+@import "modules/request";
+@import "modules/gallary";
+@import "modules/map";
+@import "modules/footer";
+
+//pages
+@import "pages/day";

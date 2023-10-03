@@ -1,0 +1,186 @@
+@import "../core";
+
+
+
+.header {
+	padding: 25px 0;
+	position: static;
+
+	@include minw($lg) {
+		padding: 10px 0;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: 110%;
+		height: 350px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $accent;
+		clip-path: ellipse(82% 39% at 32% 0%);
+		z-index: 3;
+
+		@include minw($lg) {
+			top: -65px;
+			clip-path: ellipse(78% 61% at 37% 0%);
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		position: static;
+
+		@include minw($lg) {
+			justify-content: space-around;
+		}
+	}
+
+	&__logo-contacts {
+		display: none;
+
+		@include minw($lg) {
+			margin-right: 51px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__phone {
+		display: none;
+
+		@include minw($lg) {
+			margin-right: 28px;
+			display: inline-block;
+			text-decoration: none;
+		}
+
+	}
+
+	&__fb,
+	&__inst {
+		display: none;
+
+		@include minw($lg) {
+			display: inline-block;
+		}
+	}
+
+	&__fb {
+		@include minw($lg) {
+			margin-right: 10px;
+		}
+
+	}
+
+	&__navigation {
+		display: none;
+		margin-right: 83px;
+		position: relative;
+		z-index: 3;
+
+		@include minw($lg) {
+			display: block;
+		}
+	}
+
+	&__navigation-list {
+		display: flex;
+		align-items: center;
+		gap: 39px;
+
+		a {
+			text-decoration: none;
+			font-weight: regular;
+			font-size: 20px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		position: relative;
+		z-index: 3;
+
+
+	}
+
+	&__burger {
+		position: relative;
+		margin-left: auto;
+		background-color: transparent;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 3;
+
+		@include minw($lg) {
+			display: none;
+		}
+
+		img[data-close] {
+			display: none;
+		}
+	}
+
+	&__link-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 6px;
+
+		@include minw($lg) {
+			gap: 0;
+		}
+
+		svg {
+			width: 42px;
+			height: 8px;
+		}
+	}
+
+	&__logo-link {
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__logo-img {
+		@include minw($lg) {
+			margin-right: 52px;
+
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+	}
+
+	&__mobile-menu {
+		padding-top: 180px;
+		padding-bottom: 37px;
+		position: absolute;
+		width: 100%;
+		top: -25px;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 28px;
+		background-color: #FCF7EB;
+		z-index: 2;
+		box-shadow: 0 0 10px 0 $green;
+		transform: translateY(-100%);
+		transition: transform 350ms ease-in-out;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

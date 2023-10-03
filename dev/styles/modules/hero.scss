@@ -1,0 +1,241 @@
+@import "../core";
+
+.hero {
+  padding-top: 65px;
+
+  @include minw($lg) {
+    padding-top: 40px;
+  }
+
+  &__headline,
+  &__info {
+    border-radius: 20px;
+  }
+
+  &__mobile {
+    @include minw($lg) {
+      display: none;
+    }
+  }
+
+  &__headline {
+    padding: 12px 30px 12px 22px;
+    margin-bottom: 5px;
+    background-color: rgba(215, 211, 211, 0.26);
+    font-size: 24px;
+    line-height: calc(29/24);
+    font-weight: 400;
+
+    @include minw($lg) {
+      margin-bottom: 10px;
+      padding: 20px;
+      font-size: 46px;
+      text-align: center;
+      border-radius: 30px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 5px;
+    padding: 12px 10px 12px 22px;
+    background-color: #F9EBC7;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    max-width: 159px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__mobile-info {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__img-btns {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin-bottom: 5px;
+      width: 166px;
+      height: 113px;
+    }
+  }
+
+  &__btn-enroll,
+  &__brn-call {
+    a {
+      display: block;
+      width: 100%;
+      padding: 7px 18px;
+      border-radius: 10px;
+      border: 1px solid #999696;
+      background-color: $green;
+      font-size: 14px;
+      color: $white;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    p {
+      font-size: 9px;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include minw($lg) {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  &__desktop-writing {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__sunflower {
+    width: 395px;
+    height: 383px;
+    border-radius: 30px;
+  }
+
+  &__desktop-writing-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      margin-bottom: 20px;
+      width: 419px;
+      height: 271px;
+      border-radius: 30px;
+    }
+
+    a {
+      display: block;
+      padding: 21px;
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid #3A3939;
+      background-color: $green;
+      font-size: 36px;
+      color: $white;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+
+  &__call-front--img {
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+
+  // &__desktop-right {}
+  &__call-front {
+    p {
+      position: absolute;
+      padding: 5px 10px;
+      right: 75px;
+      bottom: 80px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: $green;
+      color: $white;
+      font-size: 36px;
+      text-transform: uppercase;
+      line-height: 1;
+      border-radius: 10px;
+
+      transform: rotate(-5deg);
+
+      svg {
+        height: 15px;
+      }
+    }
+  }
+
+  &__call {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+
+
+  }
+
+  &__call-kids {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      margin-bottom: 20px;
+      width: 408px;
+      height: 160px;
+      border-radius: 30px;
+    }
+
+    a {
+      display: block;
+      padding: 21px;
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid #3A3939;
+      background-color: $green;
+      font-size: 36px;
+      color: $white;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+    }
+
+  }
+
+  &__desktop-slogan {
+    max-width: 834px;
+    margin-bottom: 10px;
+    padding: 20px 45px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    background-color: $accent;
+    border-radius: 30px;
+  }
+}
