@@ -19,6 +19,7 @@ window.addEventListener("load", function () {
   const partTime = document.querySelector('.form__parttime');
   const formApplication = document.querySelector('.form__application');
   const faqBtnClose = document.querySelectorAll('.faq__btn-close');
+  const linksScrollForm = document.querySelectorAll('.link__scroll-form')
 
   burgerBtn.addEventListener('click', burgerMenuToggle);
   faqBtns.forEach(item => item.addEventListener('click', openThisInfoFaq));
@@ -163,36 +164,78 @@ window.addEventListener("load", function () {
       },
     });
   }
+  linksScrollForm.forEach(btn => {
+    btn.addEventListener('click', () => {
+      animationFix()
+    })
+  })
+  document.querySelectorAll('.header__navigation-list li').forEach(link => {
+    link.addEventListener('click', () => {
+      animationFix()
+    })
+  })
+  document.querySelectorAll('.header__mobile-menu li').forEach(link => {
+    link.addEventListener('click', () => {
+      animationFix()
+    })
+  })
+  document.querySelectorAll('.footer__list li').forEach(link => {
+    link.addEventListener('click', () => {
+      animationFix()
+    })
+  })
+  document.querySelectorAll('.header__logo-link').forEach(link => {
+    link.addEventListener('click', () => {
+      animationFix()
+    })
+  })
+  function animationFix() {
+    animationGsapScroll('.request__headline', ".hero", 50, 'top 90%');
+    animationGsapScroll('.request__qr-text', ".hero", 50, 'top 90%');
+    animationGsapScroll('.request__qr-wrapper', ".hero", 50, 'top 90%');
+    animationGsapScroll('.form__application', ".hero", 50, 'top 90%');
+    animationGsapScroll('.request__info', ".hero", 50, 'top 90%');
+    animationGsapScroll('.gallary__headline', ".hero", 50, 'top 90%');
+    animationGsapScroll('.gallary__item', ".hero", 50, 'top 90%');
+    animationGsapScroll('.gallary__info', ".hero", 50, 'top 90%');
+    animationGsapScroll('.gallary__btn', ".hero", 50, 'top 90%');
+    animationGsapScroll('.faq__headline', ".hero", 50, 'top 90%');
+    animationGsapScroll('.faq__item', ".hero", 50, 'top 90%');
+    animationGsapScroll('.faq__slogan', ".hero", 150, 'top 90%');
+    animationGsapScroll('.map__adress', ".hero", 50, 'top 90%');
+    animationGsapScroll('.map__contact', ".hero", 50, 'top 90%');
+    animationGsapScroll('.footer__inner', ".hero", 50, 'top 90%');
+  }
   if (document.querySelector('.day__item')) {
     animationGsapScroll('.day__item', ".day");
   }
   if (document.querySelector('.hero__anim')) {
     animationGsapScroll('.hero__anim', ".hero", 50, 'top 90%');
-    animationGsapScroll('.kids__subtext', ".kids__benefits", 50, 'top 30%');
+    animationGsapScroll('.kids__subtext', ".kids__benefits", 50, 'top 90%');
     animationGsapScroll('.kids__benefits', ".kids__headline", 50, 'top 60%');
     animationGsapScroll('.education__slider', ".education__headline");
     animationGsapScroll('.education__slogan', ".education__slider");
     animationGsapScroll('.education__link', ".education__slogan", 50, 'top 90%');
     animationGsapScroll('.price__headline', ".price", 50, 'top 90%');
-    animationGsapScroll('.price__item-info', ".price__headline", 50, 'top 30%');
+    animationGsapScroll('.price__item-info', ".price__headline", 50, 'top 90%');
     animationGsapScroll('.price__subtext', ".price__item-btn", 50, 'top 60%');
-    animationGsapScroll('.boss__headline', ".boss", 50, 'top 30%');
-    animationGsapScroll('.boss__item', ".boss__headline", 150, 'top 30%');
-    animationGsapScroll('.boss__slogan', ".boss__item", 150, 'top 30%');
+    animationGsapScroll('.boss__headline', ".boss", 50, 'top 90%');
+    animationGsapScroll('.boss__item', ".boss__headline", 150, 'top 90%');
+    animationGsapScroll('.boss__slogan', ".boss__item", 150, 'top 90%');
     animationGsapScroll('.request__headline', ".request", 50, 'top 90%');
-    animationGsapScroll('.request__qr-text', ".request", 50, 'top 90%');
+    animationGsapScroll('.request__qr-text', ".request__form", 50, 'top 90%');
     animationGsapScroll('.request__qr-wrapper', ".request", 50, 'top 90%');
-    animationGsapScroll('.form__application', ".request__qr-wrapper", 50, 'top 30%');
-    animationGsapScroll('.request__info', ".request__qr-text", 50, 'top 30%');
-    animationGsapScroll('.gallary__headline', ".gallary", 50, 'top 30%');
-    animationGsapScroll('.gallary__item', ".gallary__headline", 50, 'top 30%');
-    animationGsapScroll('.gallary__info', ".gallary__item", 50, 'top 30%');
-    animationGsapScroll('.gallary__btn', ".gallary__info", 50, 'top 30%');
-    animationGsapScroll('.faq__headline', ".faq", 50, 'top 30%');
-    animationGsapScroll('.faq__item', ".faq__headline", 50, 'top 30%');
+    animationGsapScroll('.form__application', ".request", 50, 'top 90%');
+    animationGsapScroll('.request__info', ".request", 50, 'top 90%');
+    animationGsapScroll('.gallary__headline', ".gallary", 50, 'top 90%');
+    animationGsapScroll('.gallary__item', ".gallary__headline", 50, 'top 90%');
+    animationGsapScroll('.gallary__info', ".gallary__item", 50, 'top 90%');
+    animationGsapScroll('.gallary__btn', ".gallary__info", 50, 'top 90%');
+    animationGsapScroll('.faq__headline', ".faq", 50, 'top 90%');
+    animationGsapScroll('.faq__item', ".faq__headline", 50, 'top 90%');
     animationGsapScroll('.faq__slogan', ".faq__list", 150, 'top 90%');
     animationGsapScroll('.map__adress', ".map", 50, 'top 90%');
     animationGsapScroll('.map__contact', ".map__adress", 150, 'top 90%');
-    animationGsapScroll('.footer__inner', ".footer", 250, 'top 90%');
   }
+  animationGsapScroll('.footer__inner', ".footer", 250, 'top 90%');
 });

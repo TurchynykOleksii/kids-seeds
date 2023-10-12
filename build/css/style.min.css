@@ -875,7 +875,8 @@ form label {
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   overflow: hidden;
-  height: 200px
+  height: 200px;
+  min-height: 620px;
 }
 
 .education__preload {
@@ -1046,6 +1047,10 @@ form label {
   text-align: center
 }
 
+.price__hidden {
+  opacity: 0;
+}
+
 .price__list {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -1199,7 +1204,8 @@ form label {
   gap: 6px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .boss__item {
@@ -1279,6 +1285,21 @@ form label {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat
+}
+
+.request__link-btn {
+  max-width: 320px;
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 10px;
+  border: 1px solid #999696;
+  background: #a9b388;
+  color: #fff;
+  text-decoration: none;
 }
 
 .boss__figure {
@@ -1445,8 +1466,8 @@ form label {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -23px;
-  font-size: 18px;
+  bottom: -8px;
+  font-size: 8px;
   color: red;
 }
 
@@ -1507,6 +1528,7 @@ form label {
 }
 
 .request__qr {
+  margin-top: 35px;
   margin-bottom: 11px
 }
 
@@ -1854,6 +1876,21 @@ form label {
   text-decoration: none
 }
 
+.price__sum-kids {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.price__sum-kids strong {
+  font-size: 20px;
+}
+
+.price__sum-kids p {
+  font-size: 9px;
+}
+
 .footer__btn-up {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2063,6 +2100,17 @@ form label {
   border-radius: 20px
 }
 
+.education__item strong {
+  display: block;
+  margin-bottom: 25px;
+  max-width: 454px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.1
+}
+
 .day__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2097,7 +2145,7 @@ form label {
 }
 
 .social {
-  margin-top: 28px;
+  margin-top: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2281,6 +2329,23 @@ main.page-template-parttime {
   .wpcf7-response-output {
     font-size: 16px;
   }
+
+  .request .wpcf7-not-valid-tip {
+    font-size: 18px;
+    bottom: -20px;
+  }
+
+
+
+
+
+  .request__link-btn {
+    font-size: 28px;
+  }
+
+  .education__item {
+    min-height: 710px;
+  }
 }
 
 @media only screen and (min-width:1262px) {
@@ -2326,6 +2391,14 @@ main.page-template-parttime {
   .header__fb,
   .header__inst {
     display: inline-block
+  }
+
+  .price__sum-kids strong {
+    font-size: 36px
+  }
+
+  .price__sum-kids p {
+    font-size: 20px;
   }
 
   .header__fb {
@@ -2377,6 +2450,10 @@ main.page-template-parttime {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 20px
+  }
+
+  .request__qr {
+    margin-top: 50px;
   }
 
   .kids__headline {
@@ -2444,11 +2521,11 @@ main.page-template-parttime {
   }
 
   .education__item strong {
+    display: block;
     margin-bottom: 25px;
     max-width: 454px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
     font-size: 28px;
     text-align: center;
     line-height: 1.3
@@ -2581,6 +2658,12 @@ main.page-template-parttime {
   .price__sum p {
     font-size: 24px
   }
+
+  .price__sum-kids {
+    margin-top: 10px;
+  }
+
+
 
   .price__item-btn {
     max-width: 610px;

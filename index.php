@@ -19,11 +19,11 @@
             <img src="<?= get_field('hero_girl')?>" alt="photo">
 
             <div class="hero__btn-enroll">
-              <a href="#form__request"><?= get_field('hero_writingbtn')?></a>
+              <a href="#form__request" class="link__scroll-form"><?= get_field('hero_writingbtn')?></a>
               <p><?= get_field('hero_writingtext')?></p>
             </div>
             <div class="hero__brn-call">
-              <a href="#form__request"><?= get_field('hero_callbtn')?></a>
+              <a href="#form__request" class="link__scroll-form"><?= get_field('hero_callbtn')?></a>
               <p><?= get_field('hero_calltext')?></p>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <div class="hero__desktop-writing-right hero__anim">
               <img src="<?= get_field('hero_girl')?>" alt="фото дитини що грає">
 
-              <a href="#form__request"><?= get_field('hero_writingbtn')?></a>
+              <a href="#form__request" class="link__scroll-form"><?= get_field('hero_writingbtn')?></a>
               <p><?= get_field('hero_writingtext')?></p>
             </div>
           </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="hero__call-kids hero__anim">
               <img src="<?= get_field('hero_call')?>" alt="фото розпису">
-              <a href="#form__request"><?= get_field('hero_callbtn')?></a>
+              <a href="#form__request" class="link__scroll-form"><?= get_field('hero_callbtn')?></a>
               <p><?= get_field('hero_calltext')?></p>
             </div>
           </div>
@@ -130,7 +130,7 @@
 
         ?>
           <li class="swiper-slide education__item">
-            <strong><?= $education_cardheadline; ?></strong>
+            <strong class="education__item-strong"><?= $education_cardheadline; ?></strong>
             <ul class="swiper__list">
               <?php
               if( have_rows('education_card_list-item') ):
@@ -200,6 +200,7 @@
         $price__schedule_link = get_sub_field('price__schedule_link');
         $price_schedule_price = get_sub_field('price_schedule_price');
         $price_schedule_btn = get_sub_field('price_schedule_btn');
+        $price_sumkids = get_sub_field('price_sumkids');
         ?>
         <li class="price__item">
           <div class="price__item-info">
@@ -221,6 +222,21 @@
               <strong><?= $price_schedule_price; ?></strong>
               <p>/ на місяць</p>
             </div>
+            <?php
+            if($price_sumkids && $price_card_headline != 'Відвідування дитини з 7:30 до 13:00'):
+            ?>
+            <div class="price__sum-kids">
+              <strong><?= $price_sumkids; ?></strong>
+              <p>для дітей до 3 років</p>
+            </div>
+            <?php else: ?>
+            <div class="price__sum price__sum-kids price__hidden">
+              <strong><?= $price_sumkids; ?></strong>
+              <p>для дітей до 3 років</p>
+            </div>
+            <?php
+            endif;
+            ?>
           </div>
           <?php if($price_card_headline == 'Відвідування дитини з 7:30 до 13:00'):
           ?>
@@ -312,17 +328,7 @@
       <h5 class="request__headline" id="form__headline"><?= get_field('request_headline')?></h5>
       <?php endif; ?>
 
-      <div class="request__qr">
-        <p class="request__qr-text">
-          <?= get_field('request_subtext')?>
-          <strong><?= get_field('request_text_bold')?></strong>
-        </p>
-        <div class="request__qr-wrapper">
-          <a class="request__guide" target="_blank"
-            href="https://drive.google.com/file/d/1vnHksiU8usZDieQWnCaKZaEL7-XfP7dA/view">Отримати гайд</a>
-        </div>
 
-      </div>
       <div class="request__form">
         <?php echo do_shortcode( '[contact-form-7 id="2067de2" html_class="form__application" title="Контактна форма 1"]' );?>
         <div class="request__info">
@@ -340,6 +346,17 @@
         endif;?>
           </ul>
         </div>
+      </div>
+      <div class="request__qr">
+        <p class="request__qr-text">
+          <?= get_field('request_subtext')?>
+          <strong><?= get_field('request_text_bold')?></strong>
+        </p>
+        <div class="request__qr-wrapper">
+          <a class="request__guide" target="_blank"
+            href="https://drive.google.com/file/d/1vnHksiU8usZDieQWnCaKZaEL7-XfP7dA/view">Отримати гайд</a>
+        </div>
+
       </div>
     </div>
   </div>
