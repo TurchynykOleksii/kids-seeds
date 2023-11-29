@@ -12,7 +12,7 @@
 		"js": "gulp js",
 		"css": "gulp scssCompress"
 	},
-	"author": "Zakharii Melnyk",
+	"author": "Turchynyk Oleksii",
 	"license": "MIT",
 	"dependencies": {
 		"gulp-cli": "^2.3.0"
