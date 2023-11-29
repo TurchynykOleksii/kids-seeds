@@ -151,13 +151,6 @@
 	// add_action( 'admin_head', 'mojFavicon' );
 
 
-	# 6.3 Изменение текста в подвале
-	// add_filter( 'admin_footer_text', '__return_empty_string' ); //удалить подвал
-
-	// add_filter('admin_footer_text', 'footer_admin_func');
-	// function footer_admin_func () {
-	// 	echo 'Розробка: <a href="#" target="_blank">DL Agency</a> ';
-	// }
 
 
 	# 6.4 Изменение внутреннего логотипа
